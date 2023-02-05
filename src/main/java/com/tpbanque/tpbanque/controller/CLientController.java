@@ -66,10 +66,7 @@ public class CLientController{
         List<CompteAvecInteret> compteAvecInteret = compteBancaireAvecInteretRepository.findAllByClientId(id);
         List<CompteSansInteret> compteSansInteret = compteBancaireSansInteretRepository.findAllByClientId(id);
 
-        //Client c = compteBancaireAvecInteretRepository.findById(2L).orElse(null).getClient();
-        
         model.addAttribute("client", client);
-        //model.addAttribute("c", c);
         model.addAttribute("compteAvecInteret", compteAvecInteret);
         model.addAttribute("compteSansInteret", compteSansInteret);
         model.addAttribute("employeAgenceClient", employeAgenceClient);
@@ -108,6 +105,15 @@ public class CLientController{
         clientService.affecterConseiller(client, employe);
 
         return "redirect:/accueil";
+    }
+
+    @GetMapping("/comptes/decouverts")
+    public  String clientDecouvert(Model model ) {
+        List<CompteBancaire> comptes = compteBancaireRepository.findBySoldeLessThan(0);
+    
+        model.addAttribute("comptes", comptes);
+
+        return "comptes-decouvert";
     }
 
     @GetMapping("/client/search")

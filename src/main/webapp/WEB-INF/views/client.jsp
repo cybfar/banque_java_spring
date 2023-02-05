@@ -31,6 +31,7 @@
               <div class="mb-2">
                 <button class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#addClientModal">Ajouter
                   une client <i class="fas fa-plus"></i> </button>
+                <a href="/comptes/decouverts" class="btn btn-sm btn-danger">Liste des comptes à découvert <i class="fas fa-plus"></i> </a>
               </div>
             </div>
             <thead class="bg-success-subtle">

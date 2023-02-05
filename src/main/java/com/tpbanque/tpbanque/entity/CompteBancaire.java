@@ -75,16 +75,16 @@ public abstract class CompteBancaire {
         return dateOuverture;
     }
 
-    // public Agence getAgence() {
-    //     return agence;
-    // }
-
     public Client getClient() {
         return client;
     }
 
     public void setClient(Client client) {
         this.client = client;
+    }
+
+    public Boolean estAdecouvert() {
+        return this.solde < 0;
     }
 
 

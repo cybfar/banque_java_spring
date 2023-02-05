@@ -9,5 +9,5 @@ import com.tpbanque.tpbanque.entity.CompteBancaire;
 
 
 public interface CompteBancaireRepository extends JpaRepository<CompteBancaire, Long>{
-
+    List<CompteBancaire> findBySoldeLessThan(Integer i);
 }
