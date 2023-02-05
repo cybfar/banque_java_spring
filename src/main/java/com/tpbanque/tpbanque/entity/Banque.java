@@ -10,7 +10,6 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Transient;
-import jakarta.validation.constraints.NotNull;
 
 @Entity
 public class Banque {
@@ -18,19 +17,15 @@ public class Banque {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotNull(message = "Le nom ne peut être vide")
     @Column()
     private String nom;
 
-    @NotNull(message = "Le numero ne peut être vide")
     @Column()
     private String numero;
 
-    @NotNull(message = "La capital ne peut être vide")
     @Column()
     private Float capital;
 
-    @NotNull(message = "L'adresse ne peut être vide")
     @Column()
     private String adresseSiege;
 

@@ -92,7 +92,7 @@
                     </div>
                     <div class="mb-3">
                       <form:label path="numero" class="form-label">Numéro</form:label>
-                      <form:input type="number" path="numero" class="form-control"  />
+                      <form:input type="text" path="numero" class="form-control"  />
                     </div>
 
                     <div class="mb-3">

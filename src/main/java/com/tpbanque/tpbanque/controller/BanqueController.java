@@ -16,7 +16,6 @@ import com.tpbanque.tpbanque.entity.Banque;
 import com.tpbanque.tpbanque.service.AgenceService;
 import com.tpbanque.tpbanque.service.BanqueService;
 
-import jakarta.validation.Valid;
 
 @Controller
 public class BanqueController {
@@ -34,7 +33,7 @@ public class BanqueController {
     }
 
     @PostMapping("/banque/ajouter")
-    public String ajoutBanque(@Valid @ModelAttribute("newbanque") Banque banque) {
+    public String ajoutBanque(@ModelAttribute("newbanque") Banque banque) {
         banqueService.createBanque(banque);
         return "redirect:/banques";
     }
